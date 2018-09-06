@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc --project $(pwd)",
-    "start": "npx tsc --project $(pwd) && node $(pwd)/build/app.js",
+    "start": "npx tsc --project $(pwd) && node $(pwd)/build/main.js",
     "lint": "npx tslint --project $(pwd)",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "sh $(pwd)/hooks/precommit.sh"
