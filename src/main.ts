@@ -1,11 +1,13 @@
-class ACMEBanking {
-  private username: string;
+import express from 'express';
 
-  constructor(username: string) {
-    this.username = username;
-  }
+import { WelcomeController } from './controllers';
 
-  public greet() {
-    return "Hello, " + this.username ? this.username : "unknown subject";
-  }
-}
+const app: express.Application = express();
+const port: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+
+app.use('/welcome', WelcomeController);
+
+app.listen(port, () => {
+  // tslint:disable-next-line no-console
+  console.log(`Listening at http://localhost:${port}/`);
+});
