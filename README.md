@@ -1,4 +1,4 @@
-# ACME Banking (TypeScript) 123
+# ACME Banking (TypeScript)
 
 ```json
 {
