@@ -6,6 +6,7 @@ import (
 	"io"
 )
 
+// this should trigger gosec due to use of MD5
 func main() {
 	h := md5.New()
 	io.WriteString(h, "The fog is getting thicker!")
