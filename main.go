@@ -1,15 +1,14 @@
 package main
 
-func main() {
-	tr := &http.Transport{
-		TLSClientConfig: &tls.Config{
-			InsecureSkipVerify: true,
-		},
-	}
+import (
+	"crypto/md5"
+	"fmt"
+	"io"
+)
 
-	client := &http.Client{Transport: tr}
-	_, err := client.Get("https://go.dev/")
-	if err != nil {
-		fmt.Println(err)
-	}
+func main() {
+	h := md5.New()
+	io.WriteString(h, "The fog is getting thicker!")
+	io.WriteString(h, "And Leon's getting laaarger!")
+	fmt.Printf("%x", h.Sum(nil))
 }
