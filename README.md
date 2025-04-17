@@ -1,1 +1,1 @@
-# acme-banking-typescript
+# ACME Banking (TypeScript)
